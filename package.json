@@ -1,0 +1,26 @@
+{
+  "name": "alarm",
+  "version": "0.0.0",
+  "description": "An alarm clock for your browser",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify main.coffee -t coffeeify -o app.js --debug",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "browser-sync start --files app.js --server --logLevel debug",
+    "watch": "watchify main.coffee -t coffeeify -o app.js -dv --debug",
+    "dev": "npm run serve & npm run watch"
+  },
+  "author": "Einar Norðfjörð",
+  "license": "WTFPL",
+  "devDependencies": {
+    "browserify": "~10.1.0",
+    "coffeeify": "~1.1.0",
+    "browser-sync": "~2.7.1",
+    "watchify": "~3.2.1"
+  },
+  "dependencies": {
+    "mithril": "~0.2.0",
+    "moment": "~2.10.2",
+    "jquery": "~2.1.4"
+  }
+}
